@@ -15,4 +15,5 @@ public class QuestionForm {
         public List<String> opts { get; set;}
          @AuraEnabled 
         public List<String> Alloptions { get; set;}
+        
     }
