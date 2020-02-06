@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>def</fullName>
+    <availability>online</availability>
+    <description>Sync Vendor List with Seller List</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>def</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&#39;/soap/ajax/27.0/connection.js&#39;)}
+ 
+if({!VendorProductList__c.Product_ID__c} = =  {!SellerProductList__c.Product_ID__c})
+{
+window.parent.location.href=&quot;https://successivetechnologies-dev-ed.lightning.force.com/lightning/r/VendorProductList__c/{!Account.Id}&quot;;
+
+}</url>
+</WebLink>
